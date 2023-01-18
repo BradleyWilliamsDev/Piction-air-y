@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  h1,
+  a {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    text-decoration: none;
+  }
+  
+  *:focus {
+    outline: none;
+  }
+  
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .background-image {
+    position: relative;
+    height: 100vh;
+    width: 1194px;
+    background: url("https://images.unsplash.com/photo-1617791160588-241658c0f566?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80") no-repeat center center scroll;
+    background-size: cover;
+    float: left;
+    -webkit-animation: bgslide 2.3s forwards;
+            animation: bgslide 2.3s forwards;
+  }
+  .background-image img {
+    width: 248px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    height: auto;
+    margin: 19px 0 0 25px;
+  }
+  
+  @-webkit-keyframes bgslide {
+    from {
+      left: -100%;
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      width: 1194px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bgslide {
+    from {
+      left: -100%;
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      width: 1194px;
+      opacity: 1;
+    }
+  }
+  
+  
+  .login {
+    max-height: 100vh;
+    overflow-Y: auto;
+    float: left;
+    margin: 0 auto;
+    width: calc(100% - 1194px);
+  }
+  .login .join-container {
+    width: 505px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .login h1 {
+    margin-top: 100px;
+    font-size: 35px;
+    font-weight: bolder;
+  }
+  .login .login-form {
+    margin-top: 112px;
+  }
+  .login .join-container .login-form form {
+    display: -ms-grid;
+    display: grid;
+  }
+  .login .join-container .login-form form input {
+    font-size: 16px;
+    font-weight: normal;
+    background: rgba(57, 57, 57, 0.07);
+    margin: 12.5px 0;
+    height: 68px;
+    border: none;
+    padding: 0 30px;
+    border-radius: 10px;
+  }
+  .login .join-container .login-form form button[type=submit] {
+    background: -webkit-linear-gradient(110deg, #64a6eb 0%, #7704b3 100%);
+    background: -o-linear-gradient(110deg, #64a6eb 0%, #7704b3 100%);
+    background: linear-gradient(-20deg, #64a6eb 0%, #7704b3 100%);
+    border: none;
+    margin-top: 124px;
+    margin-bottom: 20px;
+    width: 241px;
+    height: 58px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .login .join-container .login-form form button[type=submit]:hover::after {
+    opacity: 1;
+  }
+  .login .join-container .login-form form button[type=submit]::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    right: 0;
+    bottom: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(#09203f), to(#537895));
+    background: -webkit-linear-gradient(bottom, #09203f 0%, #537895 100%);
+    background: -o-linear-gradient(bottom, #09203f 0%, #537895 100%);
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  }
+  .login .join-container {
+    position: relative;
+    margin-top: -30px;
+  }
+  .login .join-container {
+    margin-top: 9px;
+  }
+  .login .join-container {
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    top: 32px;
+    color: #3B3B3B;
+    margin-left: 15px;
+  }
+  .login .join-container {
+    position: absolute;
+    right: 0;
+    margin-top: 100px;
+  }
+  .login .join-container a {
+    font-size: 16px;
+    position: relative;
+    font-weight: normal;
+    color: #918F8F;
+  }
+  .login .join-container a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 100px;
+    background: -webkit-linear-gradient(110deg, #f794a4 0%, #fdd6bd 100%);
+    background: -o-linear-gradient(110deg, #f794a4 0%, #fdd6bd 100%);
+    background: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+    bottom: -4px;
+    left: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    right: 0;
+  }
+  .login .join-container a:hover::after {
+    opacity: 1;
+  }
+  
+  @media only screen and (min-width: 1024px) and (max-width: 1680px) {
+    .background-image {
+      width: 50%;
+      -webkit-animation: none;
+              animation: none;
+    }
+  
+    .btn {
+      width: 50%;
+    }
+  }
+  /* Display 12", iPad PRO Portrait, iPad landscape */
+  @media only screen and (max-width: 1024px) {
+    body {
+      overflow-x: hidden;
+    }
+  
+    @-webkit-keyframes slideIn {
+      from {
+        left: -100%;
+        opacity: 0;
+      }
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+  
+    @keyframes slideIn {
+      from {
+        left: -100%;
+        opacity: 0;
+      }
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+    .background-image {
+      float: none;
+      background: url("https://images.unsplash.com/photo-1617791160588-241658c0f566?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80") top center;
+      background-size: cover;
+      -webkit-animation: slideIn 0.8s ease-in-out forwards;
+              animation: slideIn 0.8s ease-in-out forwards;
+      width: 100%;
+      height: 190px;
+      text-align: center;
+    }
+    .background-image img {
+      width: 100px;
+      height: auto;
+      margin: 20px auto !important;
+      text-align: center;
+    }
+    .background-image {
+      left: 33px;
+      top: 29px;
+      display: block;
+      position: absolute;
+    }
+    .background-image span {
+      display: block;
+      height: 4px;
+      margin: 6px;
+      background-color: #fff;
+    }
+    .background-image span:nth-child(1) {
+      width: 37px;
+    }
+    .background-image span:nth-child(2) {
+      width: 28px;
+    }
+    .background-image span:nth-child(3) {
+      width: 20px;
+    }
+  
+    .login {
+      float: none;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .login .join-container {
+      -webkit-animation: slideIn 0.8s ease-in-out forwards;
+              animation: slideIn 0.8s ease-in-out forwards;
+      width: 85%;
+      float: none;
+    }
+    .login .join-container h1 {
+      font-size: 25px;
+      margin-top: 100px;
+    }
+    .login .join-container .login-form {
+      margin-top: 90px;
+    }
+    .login .join-container .login-form form input {
+      height: 45px;
+    }
+    .login .join-container .login-form form button[type=submit] {
+      height: 45px;
+      margin-top: 100px;
+    }
+    .login .join-container .login-form .remember-form {
+      position: relative;
+      margin-top: -14px;
+    }
+    .btn .join-container .login-form .remember-form span {
+      font-size: 16px;
+      margin-top: 22px;
+      top: inherit;
+    }
+  }

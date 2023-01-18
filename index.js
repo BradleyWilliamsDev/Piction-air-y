@@ -123,7 +123,9 @@ io.on('connection', (socket) => {
                         rounds++;
                     }else{
                         // add end screen code here:
-                        io.emit('endGame');
+                        io.emit('endGame', () => {
+                            users:getRoomUsers(user.room)
+                        });
                     }
                 } else{
                     io.to(user.room).emit('message', formatMessage(user.username, "This was a close guess!"));

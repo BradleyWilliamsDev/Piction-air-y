@@ -59,8 +59,6 @@ a {
 	justify-content: space-between;
 }
 
-
-
 .chat-main {
 	display: grid;
 	grid-template-columns: 2fr 5fr;
@@ -200,7 +198,7 @@ a {
 	flex: 1;
 }
 
-/* Join Page */
+/* endGame Page */
 .join-container {
 	max-width: 500px;
 	margin: 80px auto;
@@ -250,16 +248,6 @@ a {
 .join-main .btn {
 	margin-top: 20px;
 	width: 100%;
-}
-
-@media (max-width: 700px) {
-	.chat-main {
-		display: block;
-	}
-
-	.chat-sidebar {
-		display: none;
-	}
 }
 
 /* CSS */

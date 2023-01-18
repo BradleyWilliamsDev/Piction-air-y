@@ -61,8 +61,9 @@ document.getElementById('leave-btn').addEventListener('click', () =>{
     }
 })
 
-socket.on('endGame', () => {
-    window.location = '../index.html'
+socket.on('endGame', data => {
+    window.location = '../endgame.html'
+    
 });
 
 chatForm.addEventListener('submit', (e) => {
@@ -251,6 +252,22 @@ socket.on('newPlayerTurn', () => {
 });
 
 function getWords(){
+    // let wordsToChoose = [];
+    const url = 'https://random-word-api.herokuapp.com/word?number=2';
+    let randomWords = [];
+    fetch(url)
+    .then(resp => resp.json())
+    .then(data => {
+        data.forEach(element => {
+            randomWords.push(element);
+        });
+        randomWords.push(words[Math.floor(Math.random() * words.length)]);
+        chooseWord(randomWords);
+    })
+    .catch(err => {
+        console.error(err.message)
+    });
+
     const words = [
         "word", "letter", "number", "person", "pen", "police", "people",
         "sound", "water", "breakfast", "place", "man", "men", "woman", "women", "boy",
@@ -267,13 +284,9 @@ function getWords(){
         "space", "whale", "unicorn", "narwhal", "furniture", "sunset", "sunburn", "Grumpy cat", "feather", "pigeon"
     ];
 
-    let wordsToChoose = [];
-
-    for (let i = 0; i < 3; i++) {
-        wordsToChoose[i] = words[Math.floor(Math.random() * words.length)];
-    }
-
-    chooseWord(wordsToChoose);
+    // for (let i = 0; i < 3; i++) {
+    //     wordsToChoose[i] = words[Math.floor(Math.random() * words.length)];
+    // }
 }
 
 function chooseWord(words){
@@ -299,7 +312,8 @@ function chooseWord(words){
     let currentTime = setInterval(function(){
         if(word === ''){
         if (countDownStartTime <= 0) {
-            let choice = Math.floor(Math.random() * 3);
+            // let choice = Math.floor(Math.random() * 3);
+            let choice = 3;
             switch(choice){
             case 1:
                 setWord(choice1);

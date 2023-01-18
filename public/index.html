@@ -11,41 +11,50 @@
 			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
 			crossorigin="anonymous"
 		/>
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/indexstyle.css" />
 </head>
 <body>
-    <section class="join-container">
-        <header class="join-header">
-            <h1>
-                <i class="fas fa-pencil-alt"></i>
-                Piction-Air-Y
-                <i class="fas fa-eraser"></i>
-            </h1>
-        </header>
-        <main class="join-main">
-            <form action="pictionary.html">
+
+    <section class="clearfix">
+        <section class="background-image"></section>
+        
+        <section class="login">
+          <section class="join-container">
+            <!-- <i class="fas fa-pencil-alt"></i> -->
+                <h1>Piction-Air-Y</h1>
+            <!-- <i class="fas fa-eraser"></i> -->
+        
+            <section class="login-form">
+              <form action="pictionary.html">
                 <section class="form-control">
                     <label for="username">Username</label>
+                    <br>
                     <input
                         type="text"
                         name="username"
                         id="username"
+                        class="input-field"
                         placeholder="Enter displayname..."
                         required
                     />
                 </section>
                 <section class="form-control">
                     <label for="room">Room</label>
+                    <br>
                     <input type="text"
                     name="room"
                     id="room"
-                    placeholder="Enter the room name you'd like to create or join..."
+                    class="input-field"
+                    placeholder="Enter a room ID..."
                     required/>
                     </select>
                 </section>
                 <button type="submit" class="btn">Join Game</button>
-            </form>
-        </main>
+              </form>
+            </section>
+        
+          </section>
+        </section>
     </section>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
